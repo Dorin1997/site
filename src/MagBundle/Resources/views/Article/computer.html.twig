@@ -1,0 +1,67 @@
+<head>
+    <link href="{{ asset('css/style.css')}}" rel="stylesheet"/>
+
+</head>
+
+{% if data.name is defined %}
+ 
+{% for bk in data.name %}
+         <div  style="border:2px solid #ebebeb;; height: 750px;">
+    
+    <div  class="bkinf" style="background: url({{asset(bk.image1)}}"  >
+                {% if bk.image1 != null%}<a class="thumbnail" href="#thumb"><img src="{{asset(bk.image1)}}" width="300px" height="325px" style="position:absolute;" /></a>{% endif %}   
+             <div class="gallerycontainer"  style="margin-top:330px;">
+               
+{% if bk.image1 != null%}<a class="thumbnail" href="#thumb"><img src="{{asset(bk.image1)}}" width="90px" height="66px"  /><span><img src="{{asset(bk.image1)}}" width="300px" height="325px"/><br /></span></a>{% endif %}
+{% if bk.image2 != null%}<a class="thumbnail" href="#thumb"><img src="{{asset(bk.image2)}}" width="90px" height="66px"  /><span><img src="{{asset(bk.image2)}}" width="300px" height="325px"/><br /></span></a>{% endif %}
+{% if bk.image3 != null%}<a class="thumbnail" href="#thumb"><img src="{{asset(bk.image3)}}" width="90px" height="66px"  /><span><img src="{{asset(bk.image3)}}" width="300px" height="325px"/><br /></span></a> {% endif %}
+{% if bk.image4 != null%}<a class="thumbnail" href="#thumb"><img src="{{asset(bk.image4)}}" width="90px" height="66px"  /><span><img src="{{asset(bk.image4)}}" width="300px" height="325px"/><br /></span></a>{% endif %}
+{% if bk.image5 != null%}<a class="thumbnail" href="#thumb"><img src="{{asset(bk.image5)}}" width="90px" height="66px"  /><span><img src="{{asset(bk.image5)}}" width="300px" height="325px"/><br /></span></a>{% endif %}
+
+                </div>
+             <br> <br> 
+
+
+                <button class="butoncos">Adauga In Cos</button>
+                  </div>
+                
+          
+           
+            <div  class="bktext"   style="border:2px solid #ebebeb;;width:700px;"> 
+           
+             
+             
+             
+         
+           
+           <p style="color:Blue; height: 36px;"><strong>Model:</strong><span>{{bk.name}}</span></p>
+           {% if bk.OS != null%}<p ><strong>OS:</strong> {{bk.OS}} </p>{% endif %}
+           {% if bk.carcase != null%}<p ><strong>Carcase:</strong> {{bk.carcase}} </p>{% endif %}
+           {% if bk.weight != null%}<p ><strong>Weight:</strong> {{bk.weight}} </p>{% endif %}
+           {% if bk.ports != null%}<p ><strong>ports:</strong> {{bk.ports}} </p>{% endif %}
+           {% if bk.procesor != null%}<p ><strong>Procesor:</strong> {{bk.procesor}} </p>{% endif %}
+           {% if bk.RAM != null%}<p><strong>RAM:</strong> {{bk.RAM}} </p>{% endif %}
+           {% if bk.memorySSD != null%}<p><strong>SSD:</strong> {{bk.memorySSD }}</p>{% endif %}
+           {% if bk.memoryHDD != null%}<p ><strong>HDD:</strong> {{bk.memoryHDD}} </p>{% endif %}   
+          
+           {% if bk.video != null%}<p ><strong>Video:</strong> {{bk.video}} </p>{% endif %}
+           {% if bk.game != null%}<p ><strong>Game:</strong> {{bk.game}}</p>{% endif %}
+           {% if bk.PowerSupply != null%}<p ><strong>PowerSupply:</strong> {{bk.PowerSupply}} </p>{% endif %}
+           {% if bk.description != null%}<p ><strong>Description:</strong> {{bk.description}} </p>{% endif %}
+           <p style="color:red;"><strong>Price:</strong> {{bk.price}} lei</p>
+           <p style="color:green;"><strong> In Stock:</strong> {{bk.stock}}</p>
+           
+                  </div>
+    </div>
+
+           
+           
+           
+             
+            
+      
+     </div>
+         {%endfor%}
+       {% else %}
+           item does not exist
+{% endif %}

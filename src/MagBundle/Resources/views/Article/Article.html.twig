@@ -1,0 +1,21 @@
+
+
+{% include 'base.html.twig' %}
+    
+    <!--- qqqq---->
+   
+ 
+         {% for bk in data.name %}
+         <a href="{{url( bk.articleType, {'id': bk.articleId})}}">
+             <div class="col-md-3"style="border:2px solid red" >
+                 <div style="width: 200px;margin:0 auto;" >
+            
+                     <img class="artimg"  src="{{asset(bk.wallper)}}">
+             <p style="margin:0 auto;">{{bk.name}}</p>
+                 </div>
+     </div></a>
+         {%endfor%}
+           
+        
+         
+  </body>

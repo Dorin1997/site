@@ -1,0 +1,77 @@
+mag_homepage:
+    path:     /
+    defaults: { _controller: MagBundle:Default:index }
+
+login:
+    path:     /login
+    defaults: { _controller: MagBundle:User:login }
+
+registration:
+    path:     /registration
+    defaults: { _controller: MagBundle:User:registration }
+check_reg:
+    path: /check_reg
+    defaults: { _controller: MagBundle:User:check_reg }
+check_login:
+    path: /check_login
+    defaults: { _controller: MagBundle:User:check_login }
+exit:
+    path: /exit
+    defaults: { _controller: MagBundle:User:exit }
+test:
+    path: /test
+    defaults: { _controller: MagBundle:User:test }
+articles:
+    path: /articles
+    defaults: { _controller: MagBundle:Article:article }
+book:
+    path: /book/{id}
+    defaults: { _controller: MagBundle:Article:book }
+phone:
+    path: /phone/{id}
+    defaults: { _controller: MagBundle:Article:phone }
+computer:
+    path: /computer/{id}
+    defaults: { _controller: MagBundle:Article:computer }
+component:
+    path: /component/{id}
+    defaults: { _controller: MagBundle:Article:component }
+peripheral:
+    path: /peripheral/{id}
+    defaults: { _controller: MagBundle:Article:peripheral }
+books:
+    path: /books
+    defaults: { _controller: MagBundle:Article:books }   
+phones:
+    path: /phones
+    defaults: { _controller: MagBundle:Article:phones }
+computers:
+    path: /computers
+    defaults: { _controller: MagBundle:Article:computers }
+components:
+    path: /components
+    defaults: { _controller: MagBundle:Article:components }
+peripherals:
+    path: /peripherals
+    defaults: { _controller: MagBundle:Article:peripherals }
+admin:
+    path: /admin
+    defaults: { _controller: MagBundle:Dashboard:adminLogIn}
+admin_log:
+    path: /admin_log_in
+    defaults: { _controller: MagBundle:Dashboard:adminCheck}
+dashboard:
+    path: /dashboard
+    defaults: { _controller: MagBundle:Dashboard:dashboard}
+restricted:
+    path: /restricted
+    defaults: { _controller: MagBundle:Dashboard:restricted}
+exit_admin:
+    path: /exit_a
+    defaults: { _controller: MagBundle:Dashboard:exita}
+deleteArticle:
+    path: /deleteArticle/{id}
+    defaults: { _controller: MagBundle:Dashboard:deleteArticle}
+addArticle:
+    path: /dashboard/addarticle
+    defaults: { _controller: MagBundle:Dashboard:addArticle}
